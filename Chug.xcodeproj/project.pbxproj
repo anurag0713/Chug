@@ -6,17 +6,23 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		600D8F322F4F59EB00844A5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 600D8F2B2F4F59EB00844A5B /* Assets.xcassets */; };
+		600D8F342F4F59EB00844A5B /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600D8F2A2F4F59EB00844A5B /* AppSettings.swift */; };
+		600D8F352F4F59EB00844A5B /* ChugApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600D8F2C2F4F59EB00844A5B /* ChugApp.swift */; };
+		600D8F372F4F59EB00844A5B /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600D8F2F2F4F59EB00844A5B /* MenuView.swift */; };
+		600D8F382F4F59EB00844A5B /* ReminderInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600D8F302F4F59EB00844A5B /* ReminderInterval.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		600D8F0E2F4F533C00844A5B /* Chug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chug.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		600D8F2A2F4F59EB00844A5B /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
+		600D8F2B2F4F59EB00844A5B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		600D8F2C2F4F59EB00844A5B /* ChugApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChugApp.swift; sourceTree = "<group>"; };
+		600D8F2E2F4F59EB00844A5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		600D8F2F2F4F59EB00844A5B /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		600D8F302F4F59EB00844A5B /* ReminderInterval.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderInterval.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		600D8F102F4F533C00844A5B /* Chug */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Chug;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		600D8F0B2F4F533C00844A5B /* Frameworks */ = {
@@ -32,7 +38,7 @@
 		600D8F052F4F533C00844A5B = {
 			isa = PBXGroup;
 			children = (
-				600D8F102F4F533C00844A5B /* Chug */,
+				600D8F312F4F59EB00844A5B /* Chug */,
 				600D8F0F2F4F533C00844A5B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +49,51 @@
 				600D8F0E2F4F533C00844A5B /* Chug.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		600D8F312F4F59EB00844A5B /* Chug */ = {
+			isa = PBXGroup;
+			children = (
+				600D8F2E2F4F59EB00844A5B /* Info.plist */,
+				600D8F392F4F59EE00844A5B /* App */,
+				600D8F3B2F4F5A2000844A5B /* Features */,
+				600D8F3A2F4F5A0700844A5B /* Models */,
+				600D8F3C2F4F5A3300844A5B /* Resources */,
+			);
+			path = Chug;
+			sourceTree = "<group>";
+		};
+		600D8F392F4F59EE00844A5B /* App */ = {
+			isa = PBXGroup;
+			children = (
+				600D8F2C2F4F59EB00844A5B /* ChugApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		600D8F3A2F4F5A0700844A5B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				600D8F2A2F4F59EB00844A5B /* AppSettings.swift */,
+				600D8F302F4F59EB00844A5B /* ReminderInterval.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		600D8F3B2F4F5A2000844A5B /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				600D8F2F2F4F59EB00844A5B /* MenuView.swift */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		600D8F3C2F4F5A3300844A5B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				600D8F2B2F4F59EB00844A5B /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -59,9 +110,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				600D8F102F4F533C00844A5B /* Chug */,
 			);
 			name = Chug;
 			packageProductDependencies = (
@@ -109,6 +157,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				600D8F322F4F59EB00844A5B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +168,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				600D8F342F4F59EB00844A5B /* AppSettings.swift in Sources */,
+				600D8F352F4F59EB00844A5B /* ChugApp.swift in Sources */,
+				600D8F372F4F59EB00844A5B /* MenuView.swift in Sources */,
+				600D8F382F4F59EB00844A5B /* ReminderInterval.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,11 +308,14 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Chug/Info.plist;
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 15.6;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.company.Chug;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -285,11 +341,14 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Chug/Info.plist;
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 15.6;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.company.Chug;
 				PRODUCT_NAME = "$(TARGET_NAME)";
