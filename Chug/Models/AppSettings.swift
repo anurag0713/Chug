@@ -11,21 +11,45 @@ import Combine
 
 class AppSettings: ObservableObject {
     
-    @Published var selectedInterval: ReminderInterval = .oneHour
-    @Published var isRunning: Bool = false
+    @Published var selectedInterval: ReminderInterval {
+        didSet {
+            UserDefaults.standard.set(selectedInterval.rawValue, forKey: Keys.interval)
+        }
+    }
+    
+    @Published var isRunning: Bool {
+        didSet {
+            UserDefaults.standard.set(isRunning, forKey: Keys.isRunning)
+        }
+    }
     
     private var cancellables = Set<AnyCancellable>()
     
+    private struct Keys {
+        static let interval = "chug.selectedInterval"
+        static let isRunning = "chug.isRunning"
+    }
+    
     init() {
-        NotificationManager.shared.stop()
-        NotificationManager.shared.requestPermission()
+        // Get saved interval
+        let savedInterval = UserDefaults.standard.double(forKey: Keys.interval)
+        self.selectedInterval = ReminderInterval(rawValue: savedInterval) ?? .oneHour
+        
+        // Get running state
+        self.isRunning = UserDefaults.standard.bool(forKey: Keys.isRunning)
+        
         setupBindings()
+        
+        // If previously running, restart notifications
+        if isRunning {
+            NotificationManager.shared.start(interval: selectedInterval.rawValue)
+        }
     }
     
     private func setupBindings() {
         
-        // Observing for Start/Stop
         $isRunning
+            .dropFirst()
             .sink { isRunning in
                 if isRunning {
                     NotificationManager.shared.start(
@@ -37,8 +61,8 @@ class AppSettings: ObservableObject {
             }
             .store(in: &cancellables)
         
-        // Observing when interval changes while running
         $selectedInterval
+            .dropFirst()
             .sink { newInterval in
                 if self.isRunning {
                     NotificationManager.shared.start(
