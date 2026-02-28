@@ -12,6 +12,7 @@
 		600D8F352F4F59EB00844A5B /* ChugApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600D8F2C2F4F59EB00844A5B /* ChugApp.swift */; };
 		600D8F372F4F59EB00844A5B /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600D8F2F2F4F59EB00844A5B /* MenuView.swift */; };
 		600D8F382F4F59EB00844A5B /* ReminderInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600D8F302F4F59EB00844A5B /* ReminderInterval.swift */; };
+		60C8583E2F52E25700A14BCE /* LaunchAtLoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C8583D2F52E25700A14BCE /* LaunchAtLoginManager.swift */; };
 		60ED50FC2F50B03F00CCC1D1 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60ED50FB2F50B03F00CCC1D1 /* NotificationManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +24,7 @@
 		600D8F2E2F4F59EB00844A5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		600D8F2F2F4F59EB00844A5B /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		600D8F302F4F59EB00844A5B /* ReminderInterval.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderInterval.swift; sourceTree = "<group>"; };
+		60C8583D2F52E25700A14BCE /* LaunchAtLoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchAtLoginManager.swift; sourceTree = "<group>"; };
 		60ED50FB2F50B03F00CCC1D1 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -102,6 +104,7 @@
 		60ED50FA2F50B03300CCC1D1 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				60C8583D2F52E25700A14BCE /* LaunchAtLoginManager.swift */,
 				60ED50FB2F50B03F00CCC1D1 /* NotificationManager.swift */,
 			);
 			path = Managers;
@@ -184,6 +187,7 @@
 				60ED50FC2F50B03F00CCC1D1 /* NotificationManager.swift in Sources */,
 				600D8F372F4F59EB00844A5B /* MenuView.swift in Sources */,
 				600D8F382F4F59EB00844A5B /* ReminderInterval.swift in Sources */,
+				60C8583E2F52E25700A14BCE /* LaunchAtLoginManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

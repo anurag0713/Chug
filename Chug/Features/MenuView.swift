@@ -11,6 +11,7 @@ import SwiftUI
 struct MenuView: View {
     
     @EnvironmentObject var settings: AppSettings
+    @State private var launchAtLogin = LaunchAtLoginManager.shared.isEnabled
     
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
@@ -26,6 +27,13 @@ struct MenuView: View {
                         .tag(interval)
                 }
             }
+            
+            Divider()
+            
+            Toggle("Launch at Login", isOn: $launchAtLogin)
+                .onChange(of: launchAtLogin) { oldValue, newValue in
+                    LaunchAtLoginManager.shared.setEnabled(newValue)
+                }
             
             Divider()
             
