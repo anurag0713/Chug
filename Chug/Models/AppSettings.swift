@@ -31,6 +31,7 @@ class AppSettings: ObservableObject {
     }
     
     init() {
+        NotificationManager.shared.requestPermission()
         // Get saved interval
         let savedInterval = UserDefaults.standard.double(forKey: Keys.interval)
         self.selectedInterval = ReminderInterval(rawValue: savedInterval) ?? .oneHour
